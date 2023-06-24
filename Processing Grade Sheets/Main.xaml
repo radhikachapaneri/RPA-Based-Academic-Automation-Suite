@@ -1,0 +1,403 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="824,2354.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="62">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="475.2,2289.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtMarks" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtGrades" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtGradePoints" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOutput" />
+      <Variable x:TypeArguments="x:Int32" Name="varAverageScore" />
+      <Variable x:TypeArguments="x:String" Name="varOverallGrade" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[dtGrades]" DisplayName="Build Data Table - Grades" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Algebra&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Geometry&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Physics&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Chemistry&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Biology&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;English&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Economics&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;History&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Geography&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Civics_x002F_Political_x0020_Science&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:BuildDataTable>
+    <ui:BuildDataTable DataTable="[dtGradePoints]" DisplayName="Build Data Table - Grade Points" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;SID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;AlgebraGP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;GeometryGP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PhysicsGP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ChemistryGP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BiologyGP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EnglishGP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EconomicsGP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;HistoryGP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;GeographyGP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Civics_x002F_Political_x0020_ScienceGP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:BuildDataTable>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Reading Student Marksheet" sap:VirtualizedContainerService.HintSize="433.6,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[&quot;C:\Users\&quot;+Environment.UserName+&quot;\Documents\UiPath\Automatorr_Challenge1\InputFile.xlsx&quot;]">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtMarks]" DisplayName="Read Marks Sheet" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A3" SheetName="Marks Master Sheet" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelApplicationScope>
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataTable">[dtMarks]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataTable">[dtMarks.AsEnumerable().GroupBy(Function(i) i.Field(Of Double)("Student's Roll Number")).Select(Function(g) g.First).CopyToDataTable]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtMarks]" DisplayName="Mapping Grade and GradePoints" sap:VirtualizedContainerService.HintSize="433.6,1138.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,1017.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="varAlgebraGrade" />
+              <Variable x:TypeArguments="x:String" Name="varGeometryGrade" />
+              <Variable x:TypeArguments="x:String" Name="varPhysicsGrade" />
+              <Variable x:TypeArguments="x:String" Name="varChemistryGrade" />
+              <Variable x:TypeArguments="x:String" Name="varBiologyGrade" />
+              <Variable x:TypeArguments="x:String" Name="varEnglishGrade" />
+              <Variable x:TypeArguments="x:String" Name="varEconomicsGrade" />
+              <Variable x:TypeArguments="x:String" Name="varHistoryGrade" />
+              <Variable x:TypeArguments="x:String" Name="varGeographyGrade" />
+              <Variable x:TypeArguments="x:String" Name="varCivicsGrade" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Multiple Grades Assign" sap:VirtualizedContainerService.HintSize="333.6,380" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varAlgebraGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=91 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=100, "A+",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=81 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=90,"A",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=71 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=80,"B",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=61 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=70,"C",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=51 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=60,"D","E")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varGeometryGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Geometry").ToString)&gt;=91 And CInt(CurrentRow.Item("Geometry").ToString)&lt;=100, "A+",If(CInt(CurrentRow.Item("Geometry").ToString)&gt;=81 And CInt(CurrentRow.Item("Geometry").ToString)&lt;=90,"A",If(CInt(CurrentRow.Item("Geometry").ToString)&gt;=71 And CInt(CurrentRow.Item("Geometry").ToString)&lt;=80,"B",If(CInt(CurrentRow.Item("Geometry").ToString)&gt;=61 And CInt(CurrentRow.Item("Geometry").ToString)&lt;=70,"C",If(CInt(CurrentRow.Item("Geometry").ToString)&gt;=51 And CInt(CurrentRow.Item("Geometry").ToString)&lt;=60,"D","E")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varPhysicsGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Physics").ToString)&gt;=91 And CInt(CurrentRow.Item("Physics").ToString)&lt;=100, "A+",If(CInt(CurrentRow.Item("Physics").ToString)&gt;=81 And CInt(CurrentRow.Item("Physics").ToString)&lt;=90,"A",If(CInt(CurrentRow.Item("Physics").ToString)&gt;=71 And CInt(CurrentRow.Item("Physics").ToString)&lt;=80,"B",If(CInt(CurrentRow.Item("Physics").ToString)&gt;=61 And CInt(CurrentRow.Item("Physics").ToString)&lt;=70,"C",If(CInt(CurrentRow.Item("Physics").ToString)&gt;=51 And CInt(CurrentRow.Item("Physics").ToString)&lt;=60,"D","E")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varChemistryGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Chemistry").ToString)&gt;=91 And CInt(CurrentRow.Item("Chemistry").ToString)&lt;=100, "A+",If(CInt(CurrentRow.Item("Chemistry").ToString)&gt;=81 And CInt(CurrentRow.Item("Chemistry").ToString)&lt;=90,"A",If(CInt(CurrentRow.Item("Chemistry").ToString)&gt;=71 And CInt(CurrentRow.Item("Chemistry").ToString)&lt;=80,"B",If(CInt(CurrentRow.Item("Chemistry").ToString)&gt;=61 And CInt(CurrentRow.Item("Chemistry").ToString)&lt;=70,"C",If(CInt(CurrentRow.Item("Chemistry").ToString)&gt;=51 And CInt(CurrentRow.Item("Chemistry").ToString)&lt;=60,"D","E")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varBiologyGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Biology").ToString)&gt;=91 And CInt(CurrentRow.Item("Biology").ToString)&lt;=100, "A+",If(CInt(CurrentRow.Item("Biology").ToString)&gt;=81 And CInt(CurrentRow.Item("Biology").ToString)&lt;=90,"A",If(CInt(CurrentRow.Item("Biology").ToString)&gt;=71 And CInt(CurrentRow.Item("Biology").ToString)&lt;=80,"B",If(CInt(CurrentRow.Item("Biology").ToString)&gt;=61 And CInt(CurrentRow.Item("Biology").ToString)&lt;=70,"C",If(CInt(CurrentRow.Item("Biology").ToString)&gt;=51 And CInt(CurrentRow.Item("Biology").ToString)&lt;=60,"D","E")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varEnglishGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("English").ToString)&gt;=91 And CInt(CurrentRow.Item("English").ToString)&lt;=100, "A+",If(CInt(CurrentRow.Item("English").ToString)&gt;=81 And CInt(CurrentRow.Item("English").ToString)&lt;=90,"A",If(CInt(CurrentRow.Item("English").ToString)&gt;=71 And CInt(CurrentRow.Item("English").ToString)&lt;=80,"B",If(CInt(CurrentRow.Item("English").ToString)&gt;=61 And CInt(CurrentRow.Item("English").ToString)&lt;=70,"C",If(CInt(CurrentRow.Item("English").ToString)&gt;=51 And CInt(CurrentRow.Item("English").ToString)&lt;=60,"D","E")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varEconomicsGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Economics").ToString)&gt;=91 And CInt(CurrentRow.Item("Economics").ToString)&lt;=100, "A+",If(CInt(CurrentRow.Item("Economics").ToString)&gt;=81 And CInt(CurrentRow.Item("Economics").ToString)&lt;=90,"A",If(CInt(CurrentRow.Item("Economics").ToString)&gt;=71 And CInt(CurrentRow.Item("Economics").ToString)&lt;=80,"B",If(CInt(CurrentRow.Item("Economics").ToString)&gt;=61 And CInt(CurrentRow.Item("Economics").ToString)&lt;=70,"C",If(CInt(CurrentRow.Item("Economics").ToString)&gt;=51 And CInt(CurrentRow.Item("Economics").ToString)&lt;=60,"D","E")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varHistoryGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=91 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=100, "A+",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=81 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=90,"A",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=71 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=80,"B",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=61 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=70,"C",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=51 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=60,"D","E")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varGeographyGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Geography").ToString)&gt;=91 And CInt(CurrentRow.Item("Geography").ToString)&lt;=100, "A+",If(CInt(CurrentRow.Item("Geography").ToString)&gt;=81 And CInt(CurrentRow.Item("Geography").ToString)&lt;=90,"A",If(CInt(CurrentRow.Item("Geography").ToString)&gt;=71 And CInt(CurrentRow.Item("Geography").ToString)&lt;=80,"B",If(CInt(CurrentRow.Item("Geography").ToString)&gt;=61 And CInt(CurrentRow.Item("Geography").ToString)&lt;=70,"C",If(CInt(CurrentRow.Item("Geography").ToString)&gt;=51 And CInt(CurrentRow.Item("Geography").ToString)&lt;=60,"D","E")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varCivicsGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Civics/Political Science").ToString)&gt;=91 And CInt(CurrentRow.Item("Civics/Political Science").ToString)&lt;=100, "A+",If(CInt(CurrentRow.Item("Civics/Political Science").ToString)&gt;=81 And CInt(CurrentRow.Item("Civics/Political Science").ToString)&lt;=90,"A",If(CInt(CurrentRow.Item("Civics/Political Science").ToString)&gt;=71 And CInt(CurrentRow.Item("Civics/Political Science").ToString)&lt;=80,"B",If(CInt(CurrentRow.Item("Civics/Political Science").ToString)&gt;=61 And CInt(CurrentRow.Item("Civics/Political Science").ToString)&lt;=70,"C",If(CInt(CurrentRow.Item("Civics/Political Science").ToString)&gt;=51 And CInt(CurrentRow.Item("Civics/Political Science").ToString)&lt;=60,"D","E")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow(&quot;Student's Name&quot;).ToString,CurrentRow.Item(&quot;Student's Roll Number&quot;).ToString,varAlgebraGrade,varGeometryGrade,varPhysicsGrade,varChemistryGrade,varBiologyGrade,varEnglishGrade,varEconomicsGrade,varHistoryGrade,varGeographyGrade,varCivicsGrade}]" DataTable="[dtGrades]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+            <ui:MultipleAssign DisplayName="Multiple Grades Assign" sap:VirtualizedContainerService.HintSize="333.6,380" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varAlgebraGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=91 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=100, "10",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=81 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=90,"8",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=71 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=80,"6",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=61 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=70,"5",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=51 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=60,"3","2")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varGeometryGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Geometry").ToString)&gt;=91 And CInt(CurrentRow.Item("Geometry").ToString)&lt;=100, "10",If(CInt(CurrentRow.Item("Geometry").ToString)&gt;=81 And CInt(CurrentRow.Item("Geometry").ToString)&lt;=90,"8",If(CInt(CurrentRow.Item("Geometry").ToString)&gt;=71 And CInt(CurrentRow.Item("Geometry").ToString)&lt;=80,"6",If(CInt(CurrentRow.Item("Geometry").ToString)&gt;=61 And CInt(CurrentRow.Item("Geometry").ToString)&lt;=70,"5",If(CInt(CurrentRow.Item("Geometry").ToString)&gt;=51 And CInt(CurrentRow.Item("Geometry").ToString)&lt;=60,"3","2")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varPhysicsGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Physics").ToString)&gt;=91 And CInt(CurrentRow.Item("Physics").ToString)&lt;=100, "10",If(CInt(CurrentRow.Item("Physics").ToString)&gt;=81 And CInt(CurrentRow.Item("Physics").ToString)&lt;=90,"8",If(CInt(CurrentRow.Item("Physics").ToString)&gt;=71 And CInt(CurrentRow.Item("Physics").ToString)&lt;=80,"6",If(CInt(CurrentRow.Item("Physics").ToString)&gt;=61 And CInt(CurrentRow.Item("Physics").ToString)&lt;=70,"5",If(CInt(CurrentRow.Item("Physics").ToString)&gt;=51 And CInt(CurrentRow.Item("Physics").ToString)&lt;=60,"3","2")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varChemistryGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Chemistry").ToString)&gt;=91 And CInt(CurrentRow.Item("Chemistry").ToString)&lt;=100, "10",If(CInt(CurrentRow.Item("Chemistry").ToString)&gt;=81 And CInt(CurrentRow.Item("Chemistry").ToString)&lt;=90,"8",If(CInt(CurrentRow.Item("Chemistry").ToString)&gt;=71 And CInt(CurrentRow.Item("Chemistry").ToString)&lt;=80,"6",If(CInt(CurrentRow.Item("Chemistry").ToString)&gt;=61 And CInt(CurrentRow.Item("Chemistry").ToString)&lt;=70,"5",If(CInt(CurrentRow.Item("Chemistry").ToString)&gt;=51 And CInt(CurrentRow.Item("Chemistry").ToString)&lt;=60,"3","2")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varBiologyGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Biology").ToString)&gt;=91 And CInt(CurrentRow.Item("Biology").ToString)&lt;=100, "10",If(CInt(CurrentRow.Item("Biology").ToString)&gt;=81 And CInt(CurrentRow.Item("Biology").ToString)&lt;=90,"8",If(CInt(CurrentRow.Item("Biology").ToString)&gt;=71 And CInt(CurrentRow.Item("Biology").ToString)&lt;=80,"6",If(CInt(CurrentRow.Item("Biology").ToString)&gt;=61 And CInt(CurrentRow.Item("Biology").ToString)&lt;=70,"5",If(CInt(CurrentRow.Item("Biology").ToString)&gt;=51 And CInt(CurrentRow.Item("Biology").ToString)&lt;=60,"3","2")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varEnglishGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("English").ToString)&gt;=91 And CInt(CurrentRow.Item("English").ToString)&lt;=100, "10",If(CInt(CurrentRow.Item("English").ToString)&gt;=81 And CInt(CurrentRow.Item("English").ToString)&lt;=90,"8",If(CInt(CurrentRow.Item("English").ToString)&gt;=71 And CInt(CurrentRow.Item("English").ToString)&lt;=80,"6",If(CInt(CurrentRow.Item("English").ToString)&gt;=61 And CInt(CurrentRow.Item("English").ToString)&lt;=70,"5",If(CInt(CurrentRow.Item("English").ToString)&gt;=51 And CInt(CurrentRow.Item("English").ToString)&lt;=60,"3","2")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varEconomicsGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Economics").ToString)&gt;=91 And CInt(CurrentRow.Item("Economics").ToString)&lt;=100, "10",If(CInt(CurrentRow.Item("Economics").ToString)&gt;=81 And CInt(CurrentRow.Item("Economics").ToString)&lt;=90,"8",If(CInt(CurrentRow.Item("Economics").ToString)&gt;=71 And CInt(CurrentRow.Item("Economics").ToString)&lt;=80,"6",If(CInt(CurrentRow.Item("Economics").ToString)&gt;=61 And CInt(CurrentRow.Item("Economics").ToString)&lt;=70,"5",If(CInt(CurrentRow.Item("Economics").ToString)&gt;=51 And CInt(CurrentRow.Item("Economics").ToString)&lt;=60,"3","2")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varHistoryGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=91 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=100, "10",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=81 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=90,"8",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=71 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=80,"6",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=61 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=70,"5",If(CInt(CurrentRow.Item("Algebra").ToString)&gt;=51 And CInt(CurrentRow.Item("Algebra").ToString)&lt;=60,"3","2")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varGeographyGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Geography").ToString)&gt;=91 And CInt(CurrentRow.Item("Geography").ToString)&lt;=100, "10",If(CInt(CurrentRow.Item("Geography").ToString)&gt;=81 And CInt(CurrentRow.Item("Geography").ToString)&lt;=90,"8",If(CInt(CurrentRow.Item("Geography").ToString)&gt;=71 And CInt(CurrentRow.Item("Geography").ToString)&lt;=80,"6",If(CInt(CurrentRow.Item("Geography").ToString)&gt;=61 And CInt(CurrentRow.Item("Geography").ToString)&lt;=70,"5",If(CInt(CurrentRow.Item("Geography").ToString)&gt;=51 And CInt(CurrentRow.Item("Geography").ToString)&lt;=60,"3","2")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[varCivicsGrade]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CInt(CurrentRow.Item("Civics/Political Science").ToString)&gt;=91 And CInt(CurrentRow.Item("Civics/Political Science").ToString)&lt;=100, "10",If(CInt(CurrentRow.Item("Civics/Political Science").ToString)&gt;=81 And CInt(CurrentRow.Item("Civics/Political Science").ToString)&lt;=90,"8",If(CInt(CurrentRow.Item("Civics/Political Science").ToString)&gt;=71 And CInt(CurrentRow.Item("Civics/Political Science").ToString)&lt;=80,"6",If(CInt(CurrentRow.Item("Civics/Political Science").ToString)&gt;=61 And CInt(CurrentRow.Item("Civics/Political Science").ToString)&lt;=70,"5",If(CInt(CurrentRow.Item("Civics/Political Science").ToString)&gt;=51 And CInt(CurrentRow.Item("Civics/Political Science").ToString)&lt;=60,"3","2")))))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow.Item(&quot;Student's Roll Number&quot;).ToString,varAlgebraGrade,varGeometryGrade,varPhysicsGrade,varChemistryGrade,varBiologyGrade,varEnglishGrade,varEconomicsGrade,varHistoryGrade,varGeographyGrade,varCivicsGrade}]" DataTable="[dtGradePoints]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
+    <ui:JoinDataTables DataTable1="[dtGrades]" DataTable2="[dtGradePoints]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Full" OutputDataTable="[dtOutput]">
+      <ui:JoinDataTables.Arguments>
+        <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
+          <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
+            <ui:JoinOperationArgument.Column1>
+              <InArgument x:TypeArguments="x:String">["ID"]</InArgument>
+            </ui:JoinOperationArgument.Column1>
+            <ui:JoinOperationArgument.Column2>
+              <InArgument x:TypeArguments="x:String">["SID"]</InArgument>
+            </ui:JoinOperationArgument.Column2>
+          </ui:JoinOperationArgument>
+        </scg:List>
+      </ui:JoinDataTables.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:JoinDataTables>
+    <ui:FilterDataTable DataTable="[dtOutput]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="433.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtOutput]" SelectColumnsMode="Remove">
+      <ui:FilterDataTable.Filters>
+        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+          <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
+        </scg:List>
+      </ui:FilterDataTable.Filters>
+      <ui:FilterDataTable.SelectColumns>
+        <scg:List x:TypeArguments="InArgument" Capacity="4">
+          <InArgument x:TypeArguments="x:String">["SID"]</InArgument>
+        </scg:List>
+      </ui:FilterDataTable.SelectColumns>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:FilterDataTable>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GeneratingMarksheet workflow" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="GeneratingMarksheet.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtOutput">[dtOutput]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
